@@ -1,11 +1,10 @@
 import requests
 import json
 
-# My API Key - https://api.weatherapi.com/v1/current.json?key=371eca43fc074d089db143400232812&q=bulk
 try:
     city = input("Enter the name of city:")
 
-    data = requests.get(f"https://api.weatherapi.com/v1/current.json?key=371eca43fc074d089db143400232812&q={city}")
+    data = requests.get(f"API_KEY={city}")
     # gives in nthe form of response (<class 'requests.models.Response'>)
 
     weather_info = data.text # converting data to string
